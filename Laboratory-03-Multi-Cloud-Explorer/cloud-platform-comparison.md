@@ -1,5 +1,5 @@
 # Cloud Platform Comparison
-
+# Checkpoint 3 – Compare the Major Cloud Platforms
 ## Comparison of Major Cloud Platforms
 
 | Category | AWS | Microsoft Azure | Google Cloud Platform |
@@ -29,3 +29,23 @@ Google Cloud Platform is particularly strong in Artificial Intelligence, Machine
 ### 4. Which cloud platform would you personally choose and why?
 
 I would personally choose AWS because it offers a wide variety of services and strong scalability. It is also suitable for both small startups and large enterprises.
+
+
+
+
+
+# Checkpoint 6 – Multi-Cloud Decision Matrix
+
+The following decision matrix recommends the most appropriate cloud provider for different business requirements.
+
+| Business Requirement | Recommended Platform | Justification |
+|---|---|---|
+| Startup Company | AWS | AWS provides flexible and scalable services that allow startups to begin with smaller resources and expand as their application grows. |
+| Enterprise Organization | AWS | AWS offers a broad range of cloud services, strong security features, global infrastructure, and scalability suitable for large organizations. |
+| Microsoft Environment | Microsoft Azure | Azure provides strong integration with Windows Server, Microsoft 365, Active Directory, and other Microsoft technologies. |
+| AI / Machine Learning | Google Cloud Platform (GCP) | GCP provides powerful AI and machine learning services, including Vertex AI, as well as high-performance computing resources. |
+| Kubernetes Deployment | Google Cloud Platform (GCP) | GCP provides Google Kubernetes Engine (GKE), a managed Kubernetes service for deploying and scaling containerized applications. |
+| Global Web Application | AWS | AWS provides global infrastructure, load balancing, automatic scaling, and content delivery services for highly available web applications. |
+
+
+
