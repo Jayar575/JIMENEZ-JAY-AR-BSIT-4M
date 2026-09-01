@@ -1,6 +1,6 @@
 
 ## Amazon Web Services (AWS) 
-## Overview
+## Brief Overview 
 Since launching in 2006, Amazon Web Services has been providing industry-leading cloud capabilities and expertise that have helped customers transform industries, communities, and lives for the better.
 
 As part of Amazon, we strive to be Earth’s most customer-centric company. We work backwards from our customers’ problems to provide them with the broadest and deepest set of cloud and AI capabilities so they can build almost anything they can imagine.
