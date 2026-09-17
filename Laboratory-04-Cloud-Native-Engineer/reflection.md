@@ -1,1 +1,10 @@
+# Mission Reflection
 
+This laboratory activity helped me understand how Docker containers work and why they are useful in modern software development. One of the main things I noticed is the difference between starting a Docker container and setting up a Virtual Machine. A Docker container can start very quickly because it does not need to boot a complete operating system. A Virtual Machine, on the other hand, needs an operating system to be installed and started first, which takes more time and uses more computer resources. Because of this, containers are generally faster and lighter for running applications.
+
+Port mapping such as `-p 8080:80` is important when a web server is running inside a container. The web server may be listening on port 80 inside the container, but that port is not automatically accessible from the host computer. Port mapping connects port 8080 on the host machine to port 80 inside the container. This allows me to open the web server from a browser by using the host's port.
+
+I also learned that using `docker rm` removes the selected container. Any data stored only inside that container's writable storage is removed along with it. This means important data should not depend only on the container. Volumes or other persistent storage options can be used when data needs to remain available after a container is deleted.
+
+Containerization can improve the way developers and IT operations teams work together. Developers can create a container containing the application and its dependencies, while the operations team can use the same container for testing and deployment. This can reduce differences between development and production environments and make the DevOps workflow more consistent.
+5.	How is your GitHub portfolio evolving?My GitHub portfolio is also becoming more organized as I continue adding laboratory activities, source code, documentation, screenshots, and reflections. It is slowly becoming a collection of my technical projects and the skills I have developed throughout my studies.
