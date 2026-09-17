@@ -1,10 +1,23 @@
-# Mission Reflection
+# Checkpoint 7 - Mission Reflection
 
-This laboratory activity helped me understand how Docker containers work and why they are useful in modern software development. One of the main things I noticed is the difference between starting a Docker container and setting up a Virtual Machine. A Docker container can start very quickly because it does not need to boot a complete operating system. A Virtual Machine, on the other hand, needs an operating system to be installed and started first, which takes more time and uses more computer resources. Because of this, containers are generally faster and lighter for running applications.
+## Mission Reflection
 
-Port mapping such as `-p 8080:80` is important when a web server is running inside a container. The web server may be listening on port 80 inside the container, but that port is not automatically accessible from the host computer. Port mapping connects port 8080 on the host machine to port 80 inside the container. This allows me to open the web server from a browser by using the host's port.
+### 1. How does the boot time and setup process of a Docker container compare to installing an operating system on a Virtual Machine?
 
-I also learned that using `docker rm` removes the selected container. Any data stored only inside that container's writable storage is removed along with it. This means important data should not depend only on the container. Volumes or other persistent storage options can be used when data needs to remain available after a container is deleted.
+A Docker container usually starts much faster than a Virtual Machine because it does not require a complete operating system to boot. Instead, it uses the host system's kernel and only contains the application and the files it needs. A Virtual Machine requires installing and starting an entire operating system, which takes more time and computer resources. Because of this, Docker containers are more lightweight and convenient for application deployment.
 
-Containerization can improve the way developers and IT operations teams work together. Developers can create a container containing the application and its dependencies, while the operations team can use the same container for testing and deployment. This can reduce differences between development and production environments and make the DevOps workflow more consistent.
-5.	How is your GitHub portfolio evolving?My GitHub portfolio is also becoming more organized as I continue adding laboratory activities, source code, documentation, screenshots, and reflections. It is slowly becoming a collection of my technical projects and the skills I have developed throughout my studies.
+### 2. Why is port mapping (-p 8080:80) necessary when running a web server inside a container?
+
+Port mapping allows the web server inside the Docker container to be accessed from the host computer. In `-p 8080:80`, port `8080` represents the host computer's port, while port `80` is the port used by the web server inside the container. Without this connection, I would not be able to access the container's web server directly through the host browser.
+
+### 3. What happens to the data inside a container when you use the docker rm command?
+
+When `docker rm` is used, the selected container is deleted. Data stored only inside the container's writable layer will also be removed. Therefore, important files or information should be stored using Docker volumes or another form of persistent storage if they need to remain after the container is deleted.
+
+### 4. How do you think containerization changes the way software developers and IT operations teams work together (DevOps)?
+
+Containerization can make collaboration between developers and IT operations easier because both teams can work with the same application environment. Developers can package an application together with its dependencies, while the operations team can use the same container for testing and deployment. This helps reduce environment-related problems and creates a more consistent DevOps workflow.
+
+### 5. How is your GitHub portfolio evolving?
+
+My GitHub portfolio is gradually becoming more organized and complete. I am adding laboratory activities, source code, documentation, screenshots, and reflections to show the projects and technologies I have worked with. Instead of simply uploading code, I am also learning how to properly document my work and explain what I learned from each activity. This makes my GitHub portfolio a useful record of my progress and technical skills as an IT student.
