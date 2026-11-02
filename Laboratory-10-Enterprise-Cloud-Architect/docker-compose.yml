@@ -1,1 +1,48 @@
+services:
+  database:
+    image: mariadb:10.6
+    container_name: nextcloud-db
+    restart: unless-stopped
 
+    environment:
+      MYSQL_ROOT_PASSWORD: cloudnova_root
+      MYSQL_PASSWORD: cloudnova_pass
+      MYSQL_DATABASE: nextcloud_db
+      MYSQL_USER: nextcloud_user
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+    networks:
+      - nextcloud_network
+
+  app:
+    image: nextcloud
+    container_name: nextcloud-app
+    restart: unless-stopped
+
+    ports:
+      - "8080:80"
+
+    environment:
+      MYSQL_PASSWORD: cloudnova_pass
+      MYSQL_DATABASE: nextcloud_db
+      MYSQL_USER: nextcloud_user
+      MYSQL_HOST: database
+
+    depends_on:
+      - database
+
+    volumes:
+      - nextcloud_data:/var/www/html
+
+    networks:
+      - nextcloud_network
+
+volumes:
+  db_data:
+  nextcloud_data:
+
+networks:
+  nextcloud_network:
+    driver: bridge
